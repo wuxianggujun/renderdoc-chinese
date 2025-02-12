@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>564</width>
-    <height>580</height>
+    <width>632</width>
+    <height>672</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,38 +35,38 @@
       </sizepolicy>
      </property>
      <property name="frameShape">
-      <enum>QFrame::Panel</enum>
+      <enum>QFrame::Shape::Panel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
+      <enum>QFrame::Shadow::Plain</enum>
      </property>
      <property name="horizontalScrollBarPolicy">
-      <enum>Qt::ScrollBarAlwaysOff</enum>
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
      </property>
      <property name="sizeAdjustPolicy">
-      <enum>QAbstractScrollArea::AdjustToContents</enum>
+      <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
      </property>
      <property name="editTriggers">
-      <set>QAbstractItemView::NoEditTriggers</set>
+      <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
      </property>
      <property name="selectionBehavior">
-      <enum>QAbstractItemView::SelectRows</enum>
+      <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
      </property>
      <property name="textElideMode">
-      <enum>Qt::ElideNone</enum>
+      <enum>Qt::TextElideMode::ElideNone</enum>
      </property>
      <property name="resizeMode">
-      <enum>QListView::Adjust</enum>
+      <enum>QListView::ResizeMode::Adjust</enum>
      </property>
     </widget>
    </item>
    <item row="0" column="2">
     <widget class="QTabWidget" name="tabWidget">
      <property name="tabPosition">
-      <enum>QTabWidget::West</enum>
+      <enum>QTabWidget::TabPosition::West</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>7</number>
      </property>
      <property name="documentMode">
       <bool>true</bool>
@@ -91,13 +91,13 @@
        <item>
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
-          <string>General</string>
+          <string>常规</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0">
            <widget class="QLabel" name="UIStyle_label">
             <property name="text">
-             <string>Visual theme of the UI</string>
+             <string>视觉主题和UI</string>
             </property>
            </widget>
           </item>
@@ -107,10 +107,10 @@
              <string>Selects the theme to display the UI in. These themes are available:&lt;br&gt;</string>
             </property>
             <property name="insertPolicy">
-             <enum>QComboBox::NoInsert</enum>
+             <enum>QComboBox::InsertPolicy::NoInsert</enum>
             </property>
             <property name="sizeAdjustPolicy">
-             <enum>QComboBox::AdjustToContents</enum>
+             <enum>QComboBox::SizeAdjustPolicy::AdjustToContents</enum>
             </property>
            </widget>
           </item>
@@ -120,7 +120,7 @@
              <string>The default font family to be used for text. This will be overridden by the default monospace font if the below option for monospace override is chosen.</string>
             </property>
             <property name="text">
-             <string>Default font family (restart required)</string>
+             <string>默认字体系列（需要重新启动）</string>
             </property>
            </widget>
           </item>
@@ -137,7 +137,7 @@
              <string>The default font family to be used for monospaced text, typically code display or tables of buffer data. If the below option for monospace override is chosen this font will be used for those extra places.</string>
             </property>
             <property name="text">
-             <string>Monospaced font family (restart required)</string>
+             <string>等宽字体系列（需要重新启动）</string>
             </property>
            </widget>
           </item>
@@ -154,7 +154,7 @@
              <string>A global scale for all fonts in the program. This will only scale text, icons and other UI elements will be scaled according to DPI settings as normal.</string>
             </property>
             <property name="text">
-             <string>Global font scale (restart required)</string>
+             <string>全局字体比例（需要重新启动）</string>
             </property>
            </widget>
           </item>
@@ -174,7 +174,7 @@
              <string>Prefer using a monospace font instead of the default font for places where resource names, action and marker names, and similar pieces of information are displayed.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;By default a monospaced font will only be used for places where fixed width is important such as code and numerical data displays.</string>
             </property>
             <property name="text">
-             <string>Prefer monospaced fonts in UI (restart required)</string>
+             <string>在 UI 中首选等宽字体（需要重新启动）</string>
             </property>
            </widget>
           </item>
@@ -191,7 +191,7 @@
           <item row="5" column="0" colspan="2">
            <widget class="Line" name="line">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -292,7 +292,7 @@ e.g. 1000 * 10 = 1e4</string>
              <string>Formatting mode to use for fields marked as a byte offset or a byte size</string>
             </property>
             <property name="text">
-             <string>Offset or size fields format mode</string>
+             <string>偏移或大小字段格式模式</string>
             </property>
            </widget>
           </item>
@@ -311,7 +311,7 @@ e.g. 1000 * 10 = 1e4</string>
 Defaults to %TEMP%.</string>
             </property>
             <property name="text">
-             <string>Directory for temporary capture files</string>
+             <string>临时捕获文件的目录</string>
             </property>
            </widget>
           </item>
@@ -344,7 +344,7 @@ Defaults to %TEMP%.</string>
 Defaults to blank, which follows system default behaviour.</string>
             </property>
             <property name="text">
-             <string>Default save directory for captures</string>
+             <string>捕获的默认保存目录</string>
             </property>
            </widget>
           </item>
@@ -380,7 +380,7 @@ Useful for capturing programs indirectly that can't easily be launched directly 
 Since this is a global system hook it must be used carefully and only when necessary!</string>
             </property>
             <property name="text">
-             <string>Allow global process hooking - be careful!</string>
+             <string>允许全局进程挂接 - 小心！</string>
             </property>
            </widget>
           </item>
@@ -409,7 +409,7 @@ methods succeed, it should not be used as a primary method of launching applicat
 program should be launched through RenderDoc via the Launch Process panel.</string>
             </property>
             <property name="text">
-             <string>Enable process injection (restart required)</string>
+             <string>启用进程注入（需要重新启动）</string>
             </property>
            </widget>
           </item>
@@ -433,7 +433,7 @@ program should be launched through RenderDoc via the Launch Process panel.</stri
              <string>Allows RenderDoc to phone home to https://renderdoc.org to anonymously check for new versions.</string>
             </property>
             <property name="text">
-             <string>Allow periodic anonymous update checks</string>
+             <string>允许定期匿名更新检查</string>
             </property>
            </widget>
           </item>
@@ -456,7 +456,7 @@ as is currently running, then by default the UI will prompt to ask if you want t
 This option overrides that and will always replay locally if the local context is selected.</string>
             </property>
             <property name="text">
-             <string>Always replay captures locally, never prompt about it</string>
+             <string>始终在本地重放捕获，从不提示</string>
             </property>
            </widget>
           </item>
@@ -476,7 +476,7 @@ This option overrides that and will always replay locally if the local context i
           <item row="19" column="1">
            <spacer name="verticalSpacer">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -492,7 +492,7 @@ This option overrides that and will always replay locally if the local context i
        <item>
         <widget class="QGroupBox" name="groupBox_9">
          <property name="title">
-          <string>Anonymous Analytics</string>
+          <string>匿名分析</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
@@ -551,20 +551,20 @@ This option overrides that and will always replay locally if the local context i
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>Core</string>
+          <string>核心</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
            <widget class="QLabel" name="label_28">
             <property name="text">
-             <string>Open Advanced Config Editor</string>
+             <string>打开高级配置编辑器</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="configEditor">
             <property name="text">
-             <string>Config Editor</string>
+             <string>配置编辑器</string>
             </property>
            </widget>
           </item>
@@ -577,14 +577,14 @@ This option overrides that and will always replay locally if the local context i
              </sizepolicy>
             </property>
             <property name="text">
-             <string>Ignored DLLs for callstack symbol resolution</string>
+             <string>用于调用堆栈符号解析的忽略的 DLL</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="chooseIgnores">
             <property name="text">
-             <string>Ignored DLLs list</string>
+             <string>忽略的 DLL 列表</string>
             </property>
            </widget>
           </item>
@@ -597,14 +597,14 @@ This option overrides that and will always replay locally if the local context i
              </sizepolicy>
             </property>
             <property name="text">
-             <string>Shader debug search paths</string>
+             <string>着色器调试搜索路径</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="chooseSearchPaths">
             <property name="text">
-             <string>Choose paths</string>
+             <string>选择路径</string>
             </property>
            </widget>
           </item>
@@ -616,7 +616,7 @@ This option overrides that and will always replay locally if the local context i
 After interop is enabled you will need to reload any capture.</string>
             </property>
             <property name="text">
-             <string>Enable Radeon GPU Profiler integration (requires capture reload)</string>
+             <string>启用 Radeon GPU Profiler 集成（需要重新加载捕获）</string>
             </property>
            </widget>
           </item>
@@ -638,7 +638,7 @@ After interop is enabled you will need to reload any capture.</string>
              <string>Locates the RadeonGPUProfiler.exe which will be used to interop with when generating and opening RGP profiles.</string>
             </property>
             <property name="text">
-             <string>Path to Radeon GPU Profiler executable</string>
+             <string>Radeon GPU Profiler 可执行文件的路径</string>
             </property>
            </widget>
           </item>
@@ -655,14 +655,14 @@ After interop is enabled you will need to reload any capture.</string>
              <string>Locates the RadeonGPUProfiler.exe which will be used to interop with when generating and opening RGP profiles.</string>
             </property>
             <property name="text">
-             <string>Browse</string>
+             <string>浏览</string>
             </property>
            </widget>
           </item>
           <item row="6" column="0" colspan="2">
            <spacer name="verticalSpacer_2">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -697,13 +697,13 @@ After interop is enabled you will need to reload any capture.</string>
        <item>
         <widget class="QGroupBox" name="groupBox_10">
          <property name="title">
-          <string>Default Replay Options</string>
+          <string>默认重播选项</string>
          </property>
          <layout class="QVBoxLayout" name="replayOptionsLayout">
           <item>
            <spacer name="verticalSpacer_8">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -738,7 +738,7 @@ After interop is enabled you will need to reload any capture.</string>
        <item>
         <widget class="QGroupBox" name="groupBox_3">
          <property name="title">
-          <string>Texture Viewer</string>
+          <string>纹理查看器</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
@@ -753,7 +753,7 @@ After interop is enabled you will need to reload any capture.</string>
              <string>Reset visible range when changing event or texture</string>
             </property>
             <property name="text">
-             <string>Reset Range on changing selection</string>
+             <string>更改选择时重置范围</string>
             </property>
            </widget>
           </item>
@@ -843,7 +843,7 @@ After interop is enabled you will need to reload any capture.</string>
              <string>List of the directories with custom shaders</string>
             </property>
             <property name="text">
-             <string>Custom shader directories</string>
+             <string>自定义着色器目录</string>
             </property>
            </widget>
           </item>
@@ -853,14 +853,14 @@ After interop is enabled you will need to reload any capture.</string>
              <string>Choose custom shader search directories.</string>
             </property>
             <property name="text">
-             <string>Choose directories</string>
+             <string>选择目录</string>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
            <spacer name="verticalSpacer_3">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -901,7 +901,7 @@ After interop is enabled you will need to reload any capture.</string>
           </sizepolicy>
          </property>
          <property name="title">
-          <string>Shader Viewer</string>
+          <string>着色器查看器</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
@@ -916,7 +916,7 @@ After interop is enabled you will need to reload any capture.</string>
              <string>In disassembly view, rename constant registers to their names from shader reflection data</string>
             </property>
             <property name="text">
-             <string>Rename disassembly registers</string>
+             <string>重命名反汇编寄存器</string>
             </property>
            </widget>
           </item>
@@ -948,7 +948,7 @@ After interop is enabled you will need to reload any capture.</string>
           </sizepolicy>
          </property>
          <property name="title">
-          <string>Shader Processing Tools</string>
+          <string>着色器处理工具</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="0" column="0" colspan="2">
@@ -964,19 +964,19 @@ After interop is enabled you will need to reload any capture.</string>
           <item row="1" column="0" colspan="2">
            <widget class="RDTableWidget" name="shaderTools">
             <property name="editTriggers">
-             <set>QAbstractItemView::NoEditTriggers</set>
+             <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
             </property>
             <property name="alternatingRowColors">
              <bool>true</bool>
             </property>
             <property name="selectionMode">
-             <enum>QAbstractItemView::SingleSelection</enum>
+             <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
             </property>
             <property name="selectionBehavior">
-             <enum>QAbstractItemView::SelectRows</enum>
+             <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
             </property>
             <property name="textElideMode">
-             <enum>Qt::ElideMiddle</enum>
+             <enum>Qt::TextElideMode::ElideMiddle</enum>
             </property>
             <property name="cornerButtonEnabled">
              <bool>false</bool>
@@ -994,7 +994,7 @@ After interop is enabled you will need to reload any capture.</string>
             <item>
              <spacer name="horizontalSpacer">
               <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+               <enum>Qt::Orientation::Horizontal</enum>
               </property>
               <property name="sizeHint" stdset="0">
                <size>
@@ -1007,21 +1007,21 @@ After interop is enabled you will need to reload any capture.</string>
             <item>
              <widget class="QPushButton" name="addShaderTool">
               <property name="text">
-               <string>Add</string>
+               <string>新增</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="editShaderTool">
               <property name="text">
-               <string>Edit</string>
+               <string>编辑</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="deleteShaderTool">
               <property name="text">
-               <string>Delete</string>
+               <string>删除</string>
               </property>
              </widget>
             </item>
@@ -1030,7 +1030,7 @@ After interop is enabled you will need to reload any capture.</string>
           <item row="3" column="0" colspan="2">
            <spacer name="verticalSpacer_4">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -1065,7 +1065,7 @@ After interop is enabled you will need to reload any capture.</string>
        <item>
         <widget class="QGroupBox" name="groupBox_6">
          <property name="title">
-          <string>Event Browser</string>
+          <string>事件浏览器</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_7">
           <item row="0" column="0">
@@ -1080,7 +1080,7 @@ After interop is enabled you will need to reload any capture.</string>
              <string>The time unit to use when displaying the duration column in the event browser</string>
             </property>
             <property name="text">
-             <string>Time unit used for action durations</string>
+             <string>用于作持续时间的时间单位</string>
             </property>
            </widget>
           </item>
@@ -1097,7 +1097,7 @@ After interop is enabled you will need to reload any capture.</string>
              <string>In the Event Browser, add fake markers if none are found in the capture.</string>
             </property>
             <property name="text">
-             <string>Add fake markers if none present (requires capture reload)</string>
+             <string>如果没有存在的标记,则添加虚假标记(需要重新捕获)</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -1118,7 +1118,7 @@ After interop is enabled you will need to reload any capture.</string>
 </string>
             </property>
             <property name="text">
-             <string>Apply marker colors</string>
+             <string>应用标记颜色</string>
             </property>
            </widget>
           </item>
@@ -1139,7 +1139,7 @@ After interop is enabled you will need to reload any capture.</string>
              <string>When coloring marker sections in the Event Browser, the whole row of a marker region will be colored, not just a bar to the left of its children.</string>
             </property>
             <property name="text">
-             <string>    - Colorise whole row for marker regions</string>
+             <string>- 为标记区域整行着色</string>
             </property>
            </widget>
           </item>
@@ -1156,7 +1156,7 @@ After interop is enabled you will need to reload any capture.</string>
           <item row="7" column="0">
            <spacer name="verticalSpacer_5">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -1227,7 +1227,7 @@ Only happens if the capture is not in the recent files list.</string>
           <item row="1" column="0">
            <spacer name="verticalSpacer_7">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -1262,7 +1262,7 @@ Only happens if the capture is not in the recent files list.</string>
        <item>
         <widget class="QGroupBox" name="groupBox_7">
          <property name="title">
-          <string>Android</string>
+          <string>安卓</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_8">
           <item row="0" column="0">
@@ -1271,7 +1271,7 @@ Only happens if the capture is not in the recent files list.</string>
              <string>The location of the root of the Android SDK. This path should contain folders such as build-tools and platform-tools.</string>
             </property>
             <property name="text">
-             <string>Android SDK root path</string>
+             <string>Android SDK 根路径</string>
             </property>
            </widget>
           </item>
@@ -1288,7 +1288,7 @@ Only happens if the capture is not in the recent files list.</string>
              <string>The location of the root of the Android SDK. This path should contain folders such as build-tools and platform-tools.</string>
             </property>
             <property name="text">
-             <string>Browse</string>
+             <string>浏览</string>
             </property>
            </widget>
           </item>
@@ -1298,7 +1298,7 @@ Only happens if the capture is not in the recent files list.</string>
              <string>The location of the root of the Java JDK. This path should contain folders such as bin and lib.</string>
             </property>
             <property name="text">
-             <string>Java JDK path</string>
+             <string>Java JDK 路径</string>
             </property>
            </widget>
           </item>
@@ -1315,7 +1315,7 @@ Only happens if the capture is not in the recent files list.</string>
              <string>The location of the root of the Java JDK. This path should contain folders such as bin and lib.</string>
             </property>
             <property name="text">
-             <string>Browse</string>
+             <string>浏览</string>
             </property>
            </widget>
           </item>
@@ -1325,7 +1325,7 @@ Only happens if the capture is not in the recent files list.</string>
              <string>Maximum time to try connecting to the target app.</string>
             </property>
             <property name="text">
-             <string>Max Connection Timeout (seconds)</string>
+             <string>最大连接超时（秒）</string>
             </property>
            </widget>
           </item>
@@ -1345,7 +1345,7 @@ Only happens if the capture is not in the recent files list.</string>
           <item row="5" column="0">
            <spacer name="verticalSpacer_6">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -1365,7 +1365,7 @@ Only happens if the capture is not in the recent files list.</string>
    <item row="1" column="2">
     <widget class="QDialogButtonBox" name="okButton">
      <property name="standardButtons">
-      <set>QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::StandardButton::Ok</set>
      </property>
     </widget>
    </item>

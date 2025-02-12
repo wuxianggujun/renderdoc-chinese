@@ -42,12 +42,12 @@
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>18</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_Tools">
     <property name="title">
-     <string>&amp;Tools</string>
+     <string>&amp;工具</string>
     </property>
     <addaction name="action_Resolve_Symbols"/>
     <addaction name="action_Recompress_Capture"/>
@@ -65,7 +65,7 @@
    </widget>
    <widget class="QMenu" name="menu_File">
     <property name="title">
-     <string>&amp;File</string>
+     <string>&amp;文件</string>
     </property>
     <widget class="QMenu" name="menu_Recent_Capture_Files">
      <property name="title">
@@ -120,7 +120,7 @@
    </widget>
    <widget class="QMenu" name="menu_Window">
     <property name="title">
-     <string>&amp;Window</string>
+     <string>&amp;窗口</string>
     </property>
     <widget class="QMenu" name="menu_Save_Layout">
      <property name="title">
@@ -169,7 +169,7 @@
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
-     <string>&amp;Help</string>
+     <string>&amp;帮助</string>
     </property>
     <widget class="QMenu" name="menu_Reported_Bugs">
      <property name="title">
@@ -200,7 +200,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Launch_Application">
    <property name="text">
-    <string>&amp;Launch Application</string>
+    <string>&amp;启动应用程序</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
@@ -208,17 +208,17 @@
   </action>
   <action name="action_Attach_to_Running_Instance">
    <property name="text">
-    <string>&amp;Attach to Running Instance</string>
+    <string>&amp;附加到正在运行的实例</string>
    </property>
   </action>
   <action name="action_Inject_into_Process">
    <property name="text">
-    <string>&amp;Inject into Process</string>
+    <string>&amp;注入到进程中</string>
    </property>
   </action>
   <action name="action_Open_Capture">
    <property name="text">
-    <string>&amp;Open Capture</string>
+    <string>&amp;打开捕获</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -226,7 +226,7 @@
   </action>
   <action name="action_Save_Capture_Inplace">
    <property name="text">
-    <string>&amp;Save Capture</string>
+    <string>&amp;保存捕获</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
@@ -234,7 +234,7 @@
   </action>
   <action name="action_Close_Capture">
    <property name="text">
-    <string>&amp;Close Capture</string>
+    <string>&amp;关闭捕获</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+F4</string>
@@ -362,7 +362,7 @@
   </action>
   <action name="action_Settings">
    <property name="text">
-    <string>&amp;Settings</string>
+    <string>&amp;设置</string>
    </property>
   </action>
   <action name="action_Manage_Remote_Servers">
@@ -372,7 +372,7 @@
   </action>
   <action name="action_View_Documentation">
    <property name="text">
-    <string>View &amp;Documentation</string>
+    <string>查看 &amp;文档</string>
    </property>
   </action>
   <action name="action_Send_Error_Report">
@@ -397,12 +397,12 @@
   </action>
   <action name="action_Clear_Capture_Files_History">
    <property name="text">
-    <string>Clear History</string>
+    <string>清除历史记录</string>
    </property>
   </action>
   <action name="action_Clear_Capture_Settings_History">
    <property name="text">
-    <string>Clear History</string>
+    <string>清除历史记录</string>
    </property>
   </action>
   <action name="action_Statistics_Viewer">
@@ -412,7 +412,7 @@
   </action>
   <action name="action_Show_Tips">
    <property name="text">
-    <string>Show Tips</string>
+    <string>显示提示</string>
    </property>
   </action>
   <action name="action_Launch_Application_Window">
@@ -452,12 +452,12 @@
   </action>
   <action name="action_Clear_Reported_Bugs">
    <property name="text">
-    <string>&amp;Clear Reported Bugs</string>
+    <string>&amp;清除已报告的 Bug</string>
    </property>
   </action>
   <action name="action_Check_for_Updates">
    <property name="text">
-    <string>Check for updates</string>
+    <string>检查更新</string>
    </property>
   </action>
   <action name="action_Create_RGP_Profile">
@@ -497,7 +497,7 @@
   </action>
   <action name="action_Open_Capture_with_Options">
    <property name="text">
-    <string>Open Capture with Options</string>
+    <string>打开带选项的捕获</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+O</string>

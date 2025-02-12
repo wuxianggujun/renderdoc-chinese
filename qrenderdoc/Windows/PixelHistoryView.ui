@@ -29,9 +29,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>***code overwritten preview*** Preview colours displayed in visible range {min} - {max} with {red, blue, green} channels.
-
-Right click to debug an event, hide failed events, or jump to the modification's primitive in the mesh view.</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;***&lt;span style=&quot; font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Noto Sans','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji'; font-size:18px; color:#1f2328; background-color:#ffffff;&quot;&gt;代码覆盖预览&lt;/span&gt;*** &lt;span style=&quot; font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Noto Sans','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji'; font-size:18px; color:#1f2328; background-color:#ffffff;&quot;&gt;在可见范围内显示的预览颜色 &lt;/span&gt; {min} - {max} &lt;span style=&quot; font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Noto Sans','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji'; font-size:18px; color:#1f2328; background-color:#ffffff;&quot;&gt;包含&lt;/span&gt; {&lt;span style=&quot; font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Noto Sans','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji'; font-size:18px; color:#1f2328; background-color:#ffffff;&quot;&gt;红色, 蓝色, 绿色&lt;/span&gt;} &lt;span style=&quot; font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Noto Sans','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji'; font-size:18px; color:#1f2328; background-color:#ffffff;&quot;&gt;通道&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Noto Sans','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji'; font-size:18px; color:#1f2328; background-color:#ffffff;&quot;&gt;右键单击以调试事件、隐藏失败事件或跳转到网格视图中的修改原语。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -78,14 +76,14 @@ Right click to debug an event, hide failed events, or jump to the modification's
       </palette>
      </property>
      <property name="text">
-      <string>Failed events are currently hidden</string>
+      <string>失败事件当前已被隐藏</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="RDTreeView" name="events">
      <property name="contextMenuPolicy">
-      <enum>Qt::CustomContextMenu</enum>
+      <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
      </property>
      <attribute name="headerMinimumSectionSize">
       <number>16</number>

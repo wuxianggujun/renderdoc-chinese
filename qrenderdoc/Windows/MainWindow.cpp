@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
  * The MIT License (MIT)
  *
  * Copyright (c) 2019-2024 Baldur Karlsson
@@ -543,7 +543,7 @@ void MainWindow::on_action_Open_Capture_triggered()
     return;
 
   QString filename = RDDialog::getOpenFileName(
-      this, tr("Select file to open"), m_Ctx.Config().LastCaptureFilePath,
+      this, tr("选择要打开的文件"), m_Ctx.Config().LastCaptureFilePath,
       tr("Capture Files (*.rdc);;Image Files (*.dds *.hdr *.exr *.bmp *.jpg "
          "*.jpeg *.png *.tga *.gif *.psd);;All Files (*)"));
 
@@ -561,7 +561,7 @@ void MainWindow::on_action_Open_Capture_with_Options_triggered()
   QDialog *openWithOptions = new QDialog(this);
   openWithOptions->setWindowFlags(openWithOptions->windowFlags() & ~Qt::WindowContextHelpButtonHint);
   openWithOptions->setWindowIcon(windowIcon());
-  openWithOptions->setWindowTitle(tr("Open Capture with Options"));
+  openWithOptions->setWindowTitle(tr("打开带选项的捕获"));
   openWithOptions->setSizeGripEnabled(false);
   openWithOptions->setModal(true);
 
@@ -601,7 +601,7 @@ void MainWindow::importCapture(const CaptureFileFormat &fmt)
   QString title = fmt.name;
 
   QString filename =
-      RDDialog::getOpenFileName(this, tr("Select file to open"), QString(),
+      RDDialog::getOpenFileName(this, tr("选择要打开的文件"), QString(),
                                 tr("%1 Files (*.%2);;All Files (*)").arg(title).arg(ext));
 
   if(!filename.isEmpty())
@@ -662,9 +662,9 @@ void MainWindow::OnCaptureTrigger(const QString &exe, const QString &workingDir,
   LambdaThread *th = new LambdaThread([this, exe, workingDir, cmdLine, env, opts, callback]() {
     if(isUnshareableDeviceInUse())
     {
-      RDDialog::warning(this, tr("RenderDoc is already capturing an app on this device"),
-                        tr("A running app on this device is already being captured with RenderDoc. "
-                           "First please close the app then try to launch again."),
+      RDDialog::warning(this, tr("RenderDoc正在此设备上捕获一个应用程序"),
+                        tr("当前设备正在使用RenderDoc捕获一个运行中的应用程序。"
+                           "请先关闭应用程序,然后再尝试重新启动。"),
                         QMessageBox::Ok);
       return;
     }
@@ -678,15 +678,15 @@ void MainWindow::OnCaptureTrigger(const QString &exe, const QString &workingDir,
       if(ret.result.code == ResultCode::JDWPFailure)
       {
         RDDialog::critical(
-            this, tr("Error connecting to debugger"),
-            tr("<html>Error launching %1 for capture.\n\n"
-               "Something went wrong connecting to the debugger on the Android device.\n\n"
-               "This can happen if the package is not marked as debuggable, the device is not "
-               "configured to allow app debugging, if the intent arguments are badly specified, or "
-               "if another android tool such as Android Studio is interfering with the debug "
-               "connection.\n\n"
-               "Close <b>all</b> instances of Android Studio or other Android programs "
-               "and try again.</html>")
+            this, tr("连接到调试器错误"),
+            tr("<html>启动 %1 进行捕获时出错。\n\n"
+               "在连接到Android设备的调试器时出错。\n\n"
+               "如果包未标记为可调试,设备可能会出现这种情况。"
+               "配置以允许应用调试,如果意图参数指定不当,或者"
+               "如果其他安卓工具,例如 Android Studio,正在干扰调试。"
+               "连接。\n\n"
+               "关闭 <b>所有</b> Android Studio 或其他 Android 程序实例 "
+               "并重试。</html>")
                 .arg(exe));
         return;
       }
@@ -694,8 +694,8 @@ void MainWindow::OnCaptureTrigger(const QString &exe, const QString &workingDir,
       if(ret.result.code != ResultCode::Succeeded)
       {
         RDDialog::critical(
-            this, tr("Error launching capture"),
-            tr("Error launching %1 for capture.\n\n%2.").arg(exe).arg(ret.result.Message()));
+            this, tr("启动捕获时出错"),
+            tr("启动 %1 时出错以进行捕获。\n\n%2.").arg(exe).arg(ret.result.Message()));
         return;
       }
 
@@ -715,7 +715,7 @@ void MainWindow::OnCaptureTrigger(const QString &exe, const QString &workingDir,
   if(th->isRunning())
   {
     QString filename = QFileInfo(exe).fileName();
-    ShowProgressDialog(this, tr("Launching %1, please wait...").arg(filename),
+    ShowProgressDialog(this, tr("正在启动 %1, 请稍等...").arg(filename),
                        [th]() { return !th->isRunning(); });
   }
   th->deleteLater();
@@ -737,8 +737,8 @@ void MainWindow::OnInjectTrigger(uint32_t PID, const rdcarray<EnvironmentModific
       if(ret.result.code != ResultCode::Succeeded)
       {
         RDDialog::critical(
-            this, tr("Error injecting into process"),
-            tr("Error injecting into process %1 for capture.\n\n%2").arg(PID).arg(ret.result.Message()));
+            this, tr("向进程注入时出错"),
+            tr("向进程 %1 注入时出错,无法捕获。\n\n%2").arg(PID).arg(ret.result.Message()));
         return;
       }
 
@@ -958,10 +958,10 @@ QString MainWindow::GetSavePath(QString title, QString filter)
   }
 
   if(title.isEmpty())
-    title = tr("Save Capture As");
+    title = tr("另存为捕获");
 
   if(filter.isEmpty())
-    filter = tr("Capture Files (*.rdc)");
+    filter = tr("捕获文件 (*.rdc)");
 
   QString filename = RDDialog::getSaveFileName(this, title, dir, filter);
 
@@ -1013,14 +1013,14 @@ void MainWindow::exportCapture(const CaptureFileFormat &fmt)
   if(!m_Ctx.IsCaptureLocal())
   {
     RDDialog::information(
-        this, tr("Save changes to capture?"),
-        tr("The capture is on a remote host, it must be saved locally before it can be exported."));
+        this, tr("保存对捕获的更改?"),
+        tr("捕获在远程主机上,必须先保存到本地,然后才能导出。"));
     PromptSaveCaptureAs();
     return;
   }
 
   QString saveFilename =
-      GetSavePath(tr("Export Capture As"),
+      GetSavePath(tr("导出捕获为"),
                   tr("%1 Files (*.%2)").arg(QString(fmt.name)).arg(QString(fmt.extension)));
 
   if(!saveFilename.isEmpty())

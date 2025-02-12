@@ -54,10 +54,10 @@
     </size>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Panel</enum>
+    <enum>QFrame::Shape::Panel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Shadow::Raised</enum>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_7">
     <property name="spacing">
@@ -78,7 +78,7 @@
     <item>
      <widget class="QLabel" name="rangeLabel">
       <property name="text">
-       <string>Range</string>
+       <string>范围</string>
       </property>
      </widget>
     </item>
@@ -240,10 +240,10 @@
     </size>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Panel</enum>
+    <enum>QFrame::Shape::Panel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Shadow::Raised</enum>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_8">
     <property name="spacing">
@@ -264,7 +264,7 @@
     <item>
      <widget class="QLabel" name="overlayLabel">
       <property name="text">
-       <string>Overlay</string>
+       <string>覆盖</string>
       </property>
      </widget>
     </item>
@@ -293,10 +293,10 @@
     </size>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Panel</enum>
+    <enum>QFrame::Shape::Panel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Shadow::Raised</enum>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_9">
     <property name="spacing">
@@ -317,7 +317,7 @@
     <item>
      <widget class="QLabel" name="zoomLabel">
       <property name="text">
-       <string>Zoom</string>
+       <string>缩放</string>
       </property>
      </widget>
     </item>
@@ -339,7 +339,7 @@
        <bool>false</bool>
       </property>
       <property name="toolButtonStyle">
-       <enum>Qt::ToolButtonTextBesideIcon</enum>
+       <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
       </property>
       <property name="autoRaise">
        <bool>true</bool>
@@ -368,7 +368,7 @@
        <bool>true</bool>
       </property>
       <property name="toolButtonStyle">
-       <enum>Qt::ToolButtonTextBesideIcon</enum>
+       <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
       </property>
       <property name="autoRaise">
        <bool>true</bool>
@@ -387,7 +387,7 @@
        <bool>true</bool>
       </property>
       <property name="insertPolicy">
-       <enum>QComboBox::NoInsert</enum>
+       <enum>QComboBox::InsertPolicy::NoInsert</enum>
       </property>
      </widget>
     </item>
@@ -429,10 +429,10 @@
     </size>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Panel</enum>
+    <enum>QFrame::Shape::Panel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Shadow::Raised</enum>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_4">
     <property name="spacing">
@@ -574,10 +574,10 @@
     </size>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Panel</enum>
+    <enum>QFrame::Shape::Panel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Shadow::Raised</enum>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_6">
     <property name="spacing">
@@ -605,7 +605,7 @@
     <item>
      <widget class="Line" name="line">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
      </widget>
     </item>
@@ -622,7 +622,7 @@
        <number>20</number>
       </property>
       <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContents</enum>
+       <enum>QComboBox::SizeAdjustPolicy::AdjustToContents</enum>
       </property>
      </widget>
     </item>
@@ -639,7 +639,7 @@
        <number>20</number>
       </property>
       <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContents</enum>
+       <enum>QComboBox::SizeAdjustPolicy::AdjustToContents</enum>
       </property>
      </widget>
     </item>
@@ -667,10 +667,10 @@
     </size>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Panel</enum>
+    <enum>QFrame::Shape::Panel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Shadow::Raised</enum>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_5">
     <property name="spacing">
@@ -691,7 +691,7 @@
     <item>
      <widget class="QLabel" name="channelLabel">
       <property name="text">
-       <string>Channels</string>
+       <string>渠道</string>
       </property>
      </widget>
     </item>
@@ -705,7 +705,7 @@
     <item>
      <widget class="Line" name="line_2">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
      </widget>
     </item>
@@ -785,7 +785,7 @@
     <item>
      <widget class="Line" name="mulSep">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
      </widget>
     </item>
@@ -817,21 +817,21 @@
        <string>128</string>
       </property>
       <property name="insertPolicy">
-       <enum>QComboBox::NoInsert</enum>
+       <enum>QComboBox::InsertPolicy::NoInsert</enum>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QRadioButton" name="depthDisplay">
       <property name="text">
-       <string>Depth</string>
+       <string>深度</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QRadioButton" name="stencilDisplay">
       <property name="text">
-       <string>Stencil</string>
+       <string>模版</string>
       </property>
      </widget>
     </item>
@@ -853,7 +853,7 @@
        <bool>true</bool>
       </property>
       <property name="insertPolicy">
-       <enum>QComboBox::NoInsert</enum>
+       <enum>QComboBox::InsertPolicy::NoInsert</enum>
       </property>
      </widget>
     </item>
@@ -954,7 +954,7 @@
     <item>
      <widget class="Line" name="gammaSep">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
      </widget>
     </item>
@@ -1042,14 +1042,14 @@ See FAQ on &quot;Gamma display of linear data&quot;</string>
       <item row="1" column="1">
        <widget class="QScrollBar" name="renderVScroll">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
       </item>
       <item row="2" column="0">
        <widget class="QScrollBar" name="renderHScroll">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
        </widget>
       </item>
@@ -1202,7 +1202,7 @@ See FAQ on &quot;Gamma display of linear data&quot;</string>
       <item row="1" column="0">
        <widget class="QPushButton" name="pixelHistory">
         <property name="text">
-         <string>History</string>
+         <string>历史</string>
         </property>
         <property name="icon">
          <iconset resource="../Resources/resources.qrc">
@@ -1213,7 +1213,7 @@ See FAQ on &quot;Gamma display of linear data&quot;</string>
       <item row="1" column="1">
        <widget class="QPushButton" name="debugPixelContext">
         <property name="text">
-         <string>Debug</string>
+         <string>调试</string>
         </property>
         <property name="icon">
          <iconset resource="../Resources/resources.qrc">
@@ -1255,10 +1255,10 @@ See FAQ on &quot;Gamma display of linear data&quot;</string>
     </rect>
    </property>
    <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
+    <enum>QFrame::Shape::NoFrame</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
+    <enum>QFrame::Shadow::Plain</enum>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="spacing">
@@ -1327,13 +1327,13 @@ See FAQ on &quot;Gamma display of linear data&quot;</string>
     <item>
      <widget class="RDTreeWidget" name="textureList">
       <property name="frameShape">
-       <enum>QFrame::Box</enum>
+       <enum>QFrame::Shape::Box</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
+       <enum>QFrame::Shadow::Sunken</enum>
       </property>
       <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
+       <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
       </property>
       <property name="showDropIndicator" stdset="0">
        <bool>false</bool>
