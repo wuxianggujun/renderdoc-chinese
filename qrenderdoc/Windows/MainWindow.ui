@@ -69,21 +69,21 @@
     </property>
     <widget class="QMenu" name="menu_Recent_Capture_Files">
      <property name="title">
-      <string>&amp;Recent Captures</string>
+      <string>&amp;最近的捕获</string>
      </property>
      <addaction name="separator"/>
      <addaction name="action_Clear_Capture_Files_History"/>
     </widget>
     <widget class="QMenu" name="menu_Recent_Capture_Settings">
      <property name="title">
-      <string>Recent Capture Settings</string>
+      <string>最近的捕获设置</string>
      </property>
      <addaction name="separator"/>
      <addaction name="action_Clear_Capture_Settings_History"/>
     </widget>
     <widget class="QMenu" name="menu_Export_As">
      <property name="title">
-      <string>&amp;Export As...</string>
+      <string>&amp;导出为...</string>
      </property>
      <property name="toolTipsVisible">
       <bool>true</bool>
@@ -91,7 +91,7 @@
     </widget>
     <widget class="QMenu" name="menu_Import_From">
      <property name="title">
-      <string>&amp;Import From...</string>
+      <string>&amp;从...导入</string>
      </property>
      <property name="toolTipsVisible">
       <bool>true</bool>
@@ -124,7 +124,7 @@
     </property>
     <widget class="QMenu" name="menu_Save_Layout">
      <property name="title">
-      <string>&amp;Save Layout</string>
+      <string>&amp;保存布局</string>
      </property>
      <addaction name="action_Save_Default_Layout"/>
      <addaction name="separator"/>
@@ -137,7 +137,7 @@
     </widget>
     <widget class="QMenu" name="menu_Load_Layout">
      <property name="title">
-      <string>&amp;Load Layout</string>
+      <string>&amp;加载布局</string>
      </property>
      <addaction name="action_Load_Default_Layout"/>
      <addaction name="separator"/>
@@ -173,7 +173,7 @@
     </property>
     <widget class="QMenu" name="menu_Reported_Bugs">
      <property name="title">
-      <string>&amp;Reported Bugs</string>
+      <string>&amp;已报告的 Bugs</string>
      </property>
      <addaction name="separator"/>
      <addaction name="action_Clear_Reported_Bugs"/>
@@ -242,122 +242,122 @@
   </action>
   <action name="action_Exit">
    <property name="text">
-    <string>E&amp;xit</string>
+    <string>退&amp;出</string>
    </property>
   </action>
   <action name="action_Python_Shell">
    <property name="text">
-    <string>P&amp;ython Shell</string>
+    <string>P&amp;ython命令行</string>
    </property>
   </action>
   <action name="action_Event_Browser">
    <property name="text">
-    <string>&amp;Event Browser</string>
+    <string>&amp;事件浏览器</string>
    </property>
   </action>
   <action name="action_Texture_Viewer">
    <property name="text">
-    <string>&amp;Texture Viewer</string>
+    <string>&amp;纹理查看器</string>
    </property>
   </action>
   <action name="action_Pipeline_State">
    <property name="text">
-    <string>&amp;Pipeline State</string>
+    <string>&amp;管线状态</string>
    </property>
   </action>
   <action name="action_API_Inspector">
    <property name="text">
-    <string>&amp;API Inspector</string>
+    <string>&amp;API检查器</string>
    </property>
   </action>
   <action name="action_Mesh_Output">
    <property name="text">
-    <string>&amp;Mesh Viewer</string>
+    <string>&amp;网格查看器</string>
    </property>
   </action>
   <action name="action_Errors_and_Warnings">
    <property name="text">
-    <string>Errors and &amp;Warnings</string>
+    <string>错误和&amp;告警</string>
    </property>
   </action>
   <action name="action_Timeline">
    <property name="text">
-    <string>T&amp;imeline</string>
+    <string>时&amp;间线</string>
    </property>
   </action>
   <action name="action_Save_Default_Layout">
    <property name="text">
-    <string>&amp;Default Layout</string>
+    <string>&amp;默认布局</string>
    </property>
   </action>
   <action name="action_Load_Default_Layout">
    <property name="text">
-    <string>&amp;Default Layout</string>
+    <string>&amp;默认布局</string>
    </property>
   </action>
   <action name="action_Save_Layout_1">
    <property name="text">
-    <string>Layout &amp;1</string>
+    <string>布局 &amp;1</string>
    </property>
   </action>
   <action name="action_Save_Layout_2">
    <property name="text">
-    <string>Layout &amp;2</string>
+    <string>布局 &amp;2</string>
    </property>
   </action>
   <action name="action_Save_Layout_3">
    <property name="text">
-    <string>Layout &amp;3</string>
+    <string>布局 &amp;3</string>
    </property>
   </action>
   <action name="action_Save_Layout_4">
    <property name="text">
-    <string>Layout &amp;4</string>
+    <string>布局 &amp;4</string>
    </property>
   </action>
   <action name="action_Save_Layout_5">
    <property name="text">
-    <string>Layout &amp;5</string>
+    <string>布局 &amp;5</string>
    </property>
   </action>
   <action name="action_Save_Layout_6">
    <property name="text">
-    <string>Layout &amp;6</string>
+    <string>布局 &amp;6</string>
    </property>
   </action>
   <action name="action_Load_Layout_1">
    <property name="text">
-    <string>Layout &amp;1</string>
+    <string>布局 &amp;1</string>
    </property>
   </action>
   <action name="action_Load_Layout_2">
    <property name="text">
-    <string>Layout &amp;2</string>
+    <string>布局 &amp;2</string>
    </property>
   </action>
   <action name="action_Load_Layout_3">
    <property name="text">
-    <string>Layout &amp;3</string>
+    <string>布局 &amp;3</string>
    </property>
   </action>
   <action name="action_Load_Layout_4">
    <property name="text">
-    <string>Layout &amp;4</string>
+    <string>布局 &amp;4</string>
    </property>
   </action>
   <action name="action_Load_Layout_5">
    <property name="text">
-    <string>Layout &amp;5</string>
+    <string>布局 &amp;5</string>
    </property>
   </action>
   <action name="action_Load_Layout_6">
    <property name="text">
-    <string>Layout &amp;6</string>
+    <string>布局 &amp;6</string>
    </property>
   </action>
   <action name="action_Resolve_Symbols">
    <property name="text">
-    <string>&amp;Resolve Symbols</string>
+    <string>&amp;解析符号</string>
    </property>
   </action>
   <action name="action_Settings">
@@ -367,12 +367,12 @@
   </action>
   <action name="action_Manage_Remote_Servers">
    <property name="text">
-    <string>&amp;Manage Remote Servers</string>
+    <string>&amp;管理远程服务器</string>
    </property>
   </action>
   <action name="action_View_Documentation">
    <property name="text">
-    <string>查看 &amp;文档</string>
+    <string>查看&amp;文档</string>
    </property>
   </action>
   <action name="action_Send_Error_Report">
@@ -382,17 +382,17 @@
   </action>
   <action name="action_Source_on_GitHub">
    <property name="text">
-    <string>Source on GitHub</string>
+    <string>汉化版在GitHub的源码</string>
    </property>
   </action>
   <action name="action_Build_Release_Downloads">
    <property name="text">
-    <string>Build/Release Downloads</string>
+    <string>构建/发布下载</string>
    </property>
   </action>
   <action name="action_About">
    <property name="text">
-    <string>&amp;About</string>
+    <string>&amp;关于</string>
    </property>
   </action>
   <action name="action_Clear_Capture_Files_History">
@@ -407,7 +407,7 @@
   </action>
   <action name="action_Statistics_Viewer">
    <property name="text">
-    <string>&amp;Statistics Viewer</string>
+    <string>&amp;统计信息查看器</string>
    </property>
   </action>
   <action name="action_Show_Tips">
@@ -417,37 +417,37 @@
   </action>
   <action name="action_Launch_Application_Window">
    <property name="text">
-    <string>&amp;Launch Application</string>
+    <string>&amp;启动应用程序</string>
    </property>
   </action>
   <action name="action_Start_Replay_Loop">
    <property name="text">
-    <string>Start Replay &amp;Loop</string>
+    <string>开始回放&amp;循环</string>
    </property>
   </action>
   <action name="action_Counter_Viewer">
    <property name="text">
-    <string>Performance &amp;Counter Viewer</string>
+    <string>性能计数&amp;查看器</string>
    </property>
   </action>
   <action name="action_Resource_Inspector">
    <property name="text">
-    <string>&amp;Resource Inspector</string>
+    <string>&amp;资源检查器</string>
    </property>
   </action>
   <action name="action_Save_Capture_As">
    <property name="text">
-    <string>Sa&amp;ve Capture As</string>
+    <string>另存&amp;为捕获</string>
    </property>
   </action>
   <action name="action_Comments">
    <property name="text">
-    <string>Capture C&amp;omments</string>
+    <string>捕获&amp;注释</string>
    </property>
   </action>
   <action name="action_Recompress_Capture">
    <property name="text">
-    <string>Re&amp;compress Capture</string>
+    <string>重新&amp;压缩捕获</string>
    </property>
   </action>
   <action name="action_Clear_Reported_Bugs">
@@ -462,12 +462,12 @@
   </action>
   <action name="action_Create_RGP_Profile">
    <property name="text">
-    <string>Create new RGP Profile</string>
+    <string>创建新的RGP配置文件</string>
    </property>
   </action>
   <action name="action_Open_RGP_Profile">
    <property name="text">
-    <string>Open RGP Profile</string>
+    <string>打开RGP配置文件</string>
    </property>
   </action>
   <action name="extension_dummy_Tools">
@@ -492,7 +492,7 @@
   </action>
   <action name="action_Manage_Extensions">
    <property name="text">
-    <string>Manage Extensions</string>
+    <string>管理扩展</string>
    </property>
   </action>
   <action name="action_Open_Capture_with_Options">

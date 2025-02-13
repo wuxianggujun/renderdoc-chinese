@@ -2238,8 +2238,8 @@ void MainWindow::OnCaptureClosed()
   if(m_Ctx.Replay().CurrentRemote().IsValid() && !m_Ctx.Replay().CurrentRemote().IsServerRunning())
   {
     statusText->setText(
-        tr("Remote server disconnected. To attempt to reconnect please select it again."));
-    contextChooser->setText(tr("Replay Context: %1").arg(tr("Local")));
+        tr("远程服务器已断开连接。要尝试重新连接，请再次选择它。"));
+    contextChooser->setText(tr("重放上下文: %1").arg(tr("本地")));
     m_Ctx.Replay().DisconnectFromRemoteServer();
 
     if(m_Ctx.HasCaptureDialog())
@@ -2704,7 +2704,7 @@ void MainWindow::on_action_Create_RGP_Profile_triggered()
   popup.setWindowFlags(popup.windowFlags() & ~Qt::WindowContextHelpButtonHint);
   popup.setWindowIcon(windowIcon());
   popup.resize(128, 16);
-  popup.setWindowTitle(tr("Making RGP Profile from %1").arg(m_Ctx.GetCaptureFilename()));
+  popup.setWindowTitle(tr("制作 RGP 配置文件 %1").arg(m_Ctx.GetCaptureFilename()));
 
   WindowingData winData = m_Ctx.CreateWindowingData(&popup);
 
@@ -2775,8 +2775,8 @@ void MainWindow::on_action_Manage_Remote_Servers_triggered()
   th->wait(500);
   if(th->isRunning())
   {
-    ShowProgressDialog(this, tr("Updating available devices, please wait..."),
-                       [th]() { return !th->isRunning(); });
+    ShowProgressDialog(this, tr("正在更新可用设备，请稍等..."), [th]() { return !th->isRunning(); });
+
   }
   th->deleteLater();
 }
@@ -2800,7 +2800,7 @@ void MainWindow::on_action_View_Documentation_triggered()
 
 void MainWindow::on_action_Source_on_GitHub_triggered()
 {
-  QDesktopServices::openUrl(QUrl::fromUserInput(lit("https://github.com/baldurk/renderdoc")));
+  QDesktopServices::openUrl(QUrl::fromUserInput(lit("https://github.com/wuxianggujun/renderdoc-chinese")));
 }
 
 void MainWindow::on_action_Build_Release_Downloads_triggered()
@@ -2877,10 +2877,10 @@ void MainWindow::on_action_Check_for_Updates_triggered()
       case UpdateResult::Unofficial:
       {
         QMessageBox::StandardButton res =
-            RDDialog::question(this, tr("Unofficial build"),
-                               tr("You are running an unofficial build, not a stable release.\n"
-                                  "Updates are only available for installed release builds\n\n"
-                                  "Would you like to open the builds list in a browser?"));
+            RDDialog::question(this, tr("非官方构建"),
+                               tr("您正在运行的是非官方构建，而不是稳定版发布。\n"
+                                  "更新只适用于已安装的发布版构建\n\n"
+                                  "您是否希望在浏览器中打开构建列表？"));
 
         if(res == QMessageBox::Yes)
           QDesktopServices::openUrl(lit("https://renderdoc.org/builds"));
@@ -2934,8 +2934,8 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
   if(RENDERDOC_IsGlobalHookActive())
   {
-    RDDialog::critical(this, tr("Global hook active"),
-                       tr("Cannot close RenderDoc while global hook is active."));
+    RDDialog::critical(this, tr("全局hook激活"),
+                       tr("当全局hook处于活动状态时，无法关闭 RenderDoc。"));
     event->ignore();
     return;
   }

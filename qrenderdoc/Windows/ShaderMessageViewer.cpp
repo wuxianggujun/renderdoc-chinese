@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
  * The MIT License (MIT)
  *
  * Copyright (c) 2019-2024 Baldur Karlsson
@@ -60,12 +60,12 @@ ShaderMessageViewer::ShaderMessageViewer(ICaptureContext &ctx, ShaderStageMask s
 
   QMenu *menu = new QMenu(this);
 
-  QAction *action = new QAction(tr("Export to &Text"));
+  QAction *action = new QAction(tr("导出到 &文本"));
   action->setIcon(Icons::save());
   QObject::connect(action, &QAction::triggered, this, &ShaderMessageViewer::exportText);
   menu->addAction(action);
 
-  action = new QAction(tr("Export to &CSV"));
+  action = new QAction(tr("导出到 &CSV"));
   action->setIcon(Icons::save());
   QObject::connect(action, &QAction::triggered, this, &ShaderMessageViewer::exportCSV);
   menu->addAction(action);
@@ -122,7 +122,7 @@ ShaderMessageViewer::ShaderMessageViewer(ICaptureContext &ctx, ShaderStageMask s
   {
     ui->stageFilters->hide();
 
-    ui->messages->setColumns({lit("Debug"), tr("Workgroup"), lit("Thread"), lit("Message")});
+   ui->messages->setColumns({lit("调试"), tr("工作组"), lit("线程"), lit("消息")});
     sortColumn = 1;
 
     ui->messages->setItemDelegateForColumn(0, m_debugDelegate);
@@ -134,21 +134,22 @@ ShaderMessageViewer::ShaderMessageViewer(ICaptureContext &ctx, ShaderStageMask s
   {
     if(pipe.GetShader(ShaderStage::Task) != ResourceId())
     {
-      ui->messages->setColumns({lit("Debug"), lit("Go to"), tr("Task group"), tr("Mesh group"),
-                                lit("Thread"), lit("Message")});
+      ui->messages->setColumns(
+          {lit("调试"), lit("跳转到"), tr("任务组"), tr("网格组"), lit("线程"), lit("消息")});
+
       sortColumn = 4;
       m_LayoutStage = ShaderStage::Task;
     }
     else if(pipe.GetShader(ShaderStage::Mesh) != ResourceId())
     {
       ui->messages->setColumns(
-          {lit("Debug"), lit("Go to"), tr("Workgroup"), lit("Thread/Location"), lit("Message")});
+          {lit("调试"), lit("跳转到"), tr("工作组"), lit("线程/位置"), lit("消息")});
       sortColumn = 3;
       m_LayoutStage = ShaderStage::Mesh;
     }
     else
     {
-      ui->messages->setColumns({lit("Debug"), lit("Go to"), tr("Location"), lit("Message")});
+      ui->messages->setColumns({lit("调试"), lit("跳转到"), tr("位置"), lit("消息")});
       sortColumn = 2;
       m_LayoutStage = ShaderStage::Vertex;
     }
@@ -203,7 +204,7 @@ ShaderMessageViewer::ShaderMessageViewer(ICaptureContext &ctx, ShaderStageMask s
 
     QMenu contextMenu(this);
 
-    QAction copy(tr("&Copy"), this);
+    QAction copy(tr("&复制"), this);
 
     contextMenu.addAction(&copy);
 
@@ -212,9 +213,9 @@ ShaderMessageViewer::ShaderMessageViewer(ICaptureContext &ctx, ShaderStageMask s
     QObject::connect(&copy, &QAction::triggered,
                      [this, pos, item]() { ui->messages->copyItem(pos, item); });
 
-    QAction debugAction(tr("&Debug"), this);
+    QAction debugAction(tr("&调试"), this);
     debugAction.setIcon(Icons::wrench());
-    QAction gotoAction(tr("&Go to"), this);
+    QAction gotoAction(tr("&跳转"), this);
     gotoAction.setIcon(Icons::find());
 
     QObject::connect(&debugAction, &QAction::triggered,
@@ -294,11 +295,11 @@ ShaderMessageViewer::ShaderMessageViewer(ICaptureContext &ctx, ShaderStageMask s
       }
       else if(msg.stage == ShaderStage::Vertex)
       {
-        debugContext = tr("Vertex %1").arg(msg.location.vertex.vertexIndex);
+        debugContext = tr("顶点 %1").arg(msg.location.vertex.vertexIndex);
       }
       else if(msg.stage == ShaderStage::Pixel)
       {
-        debugContext = tr("Pixel %1,%2").arg(msg.location.pixel.x).arg(msg.location.pixel.y);
+        debugContext = tr("像素 %1,%2").arg(msg.location.pixel.x).arg(msg.location.pixel.y);
       }
       else if(msg.stage == ShaderStage::Task)
       {
@@ -373,9 +374,8 @@ ShaderMessageViewer::ShaderMessageViewer(ICaptureContext &ctx, ShaderStageMask s
     }
     else
     {
-      RDDialog::critical(
-          this, tr("Shader can't be debugged"),
-          tr("The shader does not support debugging: %1").arg(refl->debugInfo.debugStatus));
+      RDDialog::critical(this, tr("着色器无法调试"),
+                         tr("该着色器不支持调试: %1").arg(refl->debugInfo.debugStatus));
     }
   });
 
@@ -660,11 +660,10 @@ void ShaderMessageViewer::OnEventChanged(uint32_t eventId)
 
     // otherwise we can't - just update the stale status
     ui->staleStatus->show();
-    ui->staleStatus->setText(
-        tr("Messages are stale because edits to %1 shaders have changed since they were fetched.\n"
-           "Select the event @%2 to refresh.")
-            .arg(staleReason)
-            .arg(m_EID));
+    ui->staleStatus->setText(tr("消息已过时，因为自从获取以来，%1 着色器的编辑内容已发生变化。\n"
+                                "选择事件 @%2 以刷新。")
+                                 .arg(staleReason)
+                                 .arg(m_EID));
 
     ui->messages->beginUpdate();
 
@@ -691,13 +690,13 @@ void ShaderMessageViewer::exportData(bool csv)
   QString title;
   if(csv)
   {
-    filter = tr("CSV Files (*.csv)");
-    title = tr("Export buffer to CSV");
+    filter = tr("CSV 文件 (*.csv)");
+    title = tr("导出缓冲区到 CSV");
   }
   else
   {
-    filter = tr("Text Files (*.txt)");
-    title = tr("Export buffer to text");
+    filter = tr("文本文件 (*.txt)");
+    title = tr("导出缓冲区到文本");
   }
 
   QString filename =
@@ -710,13 +709,13 @@ void ShaderMessageViewer::exportData(bool csv)
 
   QIODevice::OpenMode flags = QIODevice::WriteOnly | QFile::Truncate | QIODevice::Text;
 
-  if(!f->open(flags))
+if(!f->open(flags))
   {
     delete f;
-    RDDialog::critical(this, tr("Error exporting file"),
-                       tr("Couldn't open file '%1' for writing").arg(filename));
+    RDDialog::critical(this, tr("导出文件错误"), tr("无法打开文件 '%1' 进行写入").arg(filename));
     return;
   }
+
 
   LambdaThread *exportThread = new LambdaThread([this, csv, f]() {
     QTextStream s(f);
